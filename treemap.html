@@ -1,8 +1,12 @@
 <!doctype html>
 <head>
-    <style type="text/css">
+   <style type="text/css">
+.thing{
+   width: 1000px;
+   height: 1000px;
+}
 
-    </style>
+   </style>
 </head>
 <meta charset="utf-8">
 
@@ -25,82 +29,82 @@
 <div class="thing" id="netflix"></div>
 
 <script>
-  // sample data array
-  var fb_data = [
-    {"value": 12.7, "name": "A"},
-    {"value": 27.5, "name": "B"},
-    {"value": 375, "name": "C"},
-    {"value": 200, "name": "D"},
-    {"value": 1684.8, "name": "other"}
-  ]
-  var tw_data = [
-    {"value":5, "name": "A"},
-    {"value":15, "name": "B"},
-    {"value":35, "name": "C"},
-    {"value":100, "name": "D"},
-    {"value":5.2, "name": "E"},
-    {"value":200, "name": "F"},
-    {"value":400, "name": "G"},
-    {"value":739.8, "name": "other"}
-  ]
-  var db_data = [
-    {"value":6, "name": "A"},
-    {"value":250, "name": "B"},
-    {"value":350, "name": "C"},
-    {"value":109.4, "name": "other"}
-  ]
-  var sp_data = [
-    {"value":21.6, "name": "A"},
-    {"value":50, "name": "B"},
-    {"value":11.6, "name": "C"},
-    {"value":100, "name": "D"},
-    {"value":100, "name": "E"},
-    {"value":250, "name": "F"},
-    {"value":526, "name": "G"},
-    {"value":1640.8, "name": "other"}
-  ]
-  var nf_data = [
-    {"value":2.25, "name": "A"},
-    {"value":6, "name": "B"},
-    {"value":15.2, "name": "C"},
-    {"value":30.3, "name": "D"},
-    {"value":50, "name": "E"},
-    {"value":2996.25, "name": "other"}
-  ]
-  // instantiate d3plus
-  var fb_viz = d3plus.viz()
-    .container("#facebook")  // container DIV to hold the visualization
-    .data(fb_data)  // data to use with the visualization
-    .type("tree_map")   // visualization type
-    .id("name")         // key for which our data is unique on
-    .size("value")      // sizing of blocks
-    .draw();             // finally, draw the visualization!
-    var tw_viz = d3plus.viz()
-    .container("#twitter")  // container DIV to hold the visualization
-    .data(tw_data)  // data to use with the visualization
-    .type("tree_map")   // visualization type
-    .id("name")         // key for which our data is unique on
-    .size("value")      // sizing of blocks
-    .draw();            // finally, draw the visualization!
-    var db_viz = d3plus.viz()
-    .container("#dropbox")  // container DIV to hold the visualization
-    .data(db_data)  // data to use with the visualization
-    .type("tree_map")   // visualization type
-    .id("name")         // key for which our data is unique on
-    .size("value")      // sizing of blocks
-    .draw();             // finally, draw the visualization!
-    var sp_viz = d3plus.viz()
-    .container("#spotify")  // container DIV to hold the visualization
-    .data(sp_data)  // data to use with the visualization
-    .type("tree_map")   // visualization type
-    .id("name")         // key for which our data is unique on
-    .size("value")      // sizing of blocks
-    .draw()             // finally, draw the visualization!
-    var nf_viz = d3plus.viz()
-    .container("#netflix")  // container DIV to hold the visualization
-    .data(nf_data)  // data to use with the visualization
-    .type("tree_map")   // visualization type
-    .id("name")         // key for which our data is unique on
-    .size("value")      // sizing of blocks
-    .draw()             // finally, draw the visualization!
+// sample data array
+var fb_data = [
+   {"value": 12.7, "name": "A"},
+   {"value": 27.5, "name": "B"},
+   {"value": 375, "name": "C"},
+   {"value": 200, "name": "D"},
+   {"value": 1684.8, "name": "other"}
+]
+var tw_data = [
+   {"value":5, "name": "A"},
+   {"value":15, "name": "B"},
+   {"value":35, "name": "C"},
+   {"value":100, "name": "D"},
+   {"value":5.2, "name": "E"},
+   {"value":200, "name": "F"},
+   {"value":400, "name": "G"},
+   {"value":739.8, "name": "other"}
+]
+var db_data = [
+   {"value":6, "name": "A"},
+   {"value":250, "name": "B"},
+   {"value":350, "name": "C"},
+   {"value":109.4, "name": "other"}
+]
+var sp_data = [
+   {"value":21.6, "name": "A"},
+   {"value":50, "name": "B"},
+   {"value":11.6, "name": "C"},
+   {"value":100, "name": "D"},
+   {"value":100, "name": "E"},
+   {"value":250, "name": "F"},
+   {"value":526, "name": "G"},
+   {"value":1640.8, "name": "other"}
+]
+var nf_data = [
+   {"value":2.25, "name": "A"},
+   {"value":6, "name": "B"},
+   {"value":15.2, "name": "C"},
+   {"value":30.3, "name": "D"},
+   {"value":50, "name": "E"},
+   {"value":2996.25, "name": "other"}
+]
+// instantiate d3plus
+var fb_viz = d3plus.viz()
+   .container("#facebook")  // container DIV to hold the visualization
+   .data(fb_data)  // data to use with the visualization
+   .type("tree_map")   // visualization type
+   .id("name")         // key for which our data is unique on
+   .size("value")      // sizing of blocks
+   .draw();             // finally, draw the visualization!
+var tw_viz = d3plus.viz()
+   .container("#twitter")  // container DIV to hold the visualization
+   .data(tw_data)  // data to use with the visualization
+   .type("tree_map")   // visualization type
+   .id("name")         // key for which our data is unique on
+   .size("value")      // sizing of blocks
+   .draw();            // finally, draw the visualization!
+var db_viz = d3plus.viz()
+   .container("#dropbox")  // container DIV to hold the visualization
+   .data(db_data)  // data to use with the visualization
+   .type("tree_map")   // visualization type
+   .id("name")         // key for which our data is unique on
+   .size("value")      // sizing of blocks
+   .draw();             // finally, draw the visualization!
+var sp_viz = d3plus.viz()
+   .container("#spotify")  // container DIV to hold the visualization
+   .data(sp_data)  // data to use with the visualization
+   .type("tree_map")   // visualization type
+   .id("name")         // key for which our data is unique on
+   .size("value")      // sizing of blocks
+   .draw()             // finally, draw the visualization!
+var nf_viz = d3plus.viz()
+   .container("#netflix")  // container DIV to hold the visualization
+   .data(nf_data)  // data to use with the visualization
+   .type("tree_map")   // visualization type
+   .id("name")         // key for which our data is unique on
+   .size("value")      // sizing of blocks
+   .draw()             // finally, draw the visualization!
 </script>
